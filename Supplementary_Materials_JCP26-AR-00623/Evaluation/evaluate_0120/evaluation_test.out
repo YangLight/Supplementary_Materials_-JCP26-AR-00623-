@@ -1,0 +1,35 @@
+Using head Default out of ['Default']
+No dtype selected, switching to float64 to match model dtype.
+Converting models to CuEq for acceleration
+开始计算 MACE 能量、力和stress...
+Processed 1/74 structures
+Processed 20/74 structures
+Processed 40/74 structures
+Processed 60/74 structures
+MACE 计算完成，开始提取参考数据...
+参考数据提取完成！
+读取原子数...
+处理能量数据...
+处理力数据...
+处理stress数据 (9分量)...
+参考stress数据点: 666
+计算stress数据点: 666
+合并所有stress分量到单一文件...
+
+所有数据处理完成！生成的文件：
+1. energy_pairplot_test.dat - 能量数据（参考值在前）
+2. forces_pairplot_test.dat - 所有力数据（展平，参考值在前）
+3. stress_pairplot_test.dat - 所有stress数据（9分量，展平，参考值在前）
+
+数据统计：
+- 能量数据：74 对
+- 力数据：37080 对
+- stress数据：666 对 (9分量×74结构)
+
+stress分量顺序说明：
+每个结构的9分量顺序: [xx, xy, xz, yx, yy, yz, zx, zy, zz]
+对应3x3矩阵: [[xx, xy, xz],
+             [yx, yy, yz],
+             [zx, zy, zz]]
+
+注意：所有stress数据单位均为 eV/Å³ (电子伏特每立方埃)
